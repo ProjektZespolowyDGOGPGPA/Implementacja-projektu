@@ -7,7 +7,7 @@ public class Player
     
     private String name;
     private Double money;
-    private List<Card> player_hand;
+    private List<Integer> player_hand;
     private Color kolor;
     private int where;
     
@@ -15,16 +15,16 @@ public class Player
     public Player()
     {
         name = "player";
-        where = 0;
-        player_hand = new ArrayList<Card>();
+        where = 40;
+        player_hand = new ArrayList<Integer>();
         money = 3000.0;
     }
         
     public Player(String imie, Color kolor )
     {
         name = imie;
-        where = 0;
-        player_hand = new ArrayList<Card>();
+        where = 40;
+        player_hand = new ArrayList<Integer>();
         money = 3000.0;
         this.kolor = kolor;
     }
@@ -33,7 +33,7 @@ public class Player
     {
         name = imie;
         where = start;
-        player_hand = new ArrayList<Card>();
+        player_hand = new ArrayList<Integer>();
         money = pieniadze;
         this.kolor = kolor;
     }
@@ -74,7 +74,16 @@ public class Player
 
     public void setWhere(int where) 
     {
-        this.where = where;
+        if(where<41)
+        {
+            this.where = where;
+        }
+        else
+        {
+            this.where= where-40;
+        }
+            
+            
     }
          
 }
