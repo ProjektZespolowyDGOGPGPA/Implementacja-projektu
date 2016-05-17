@@ -85,5 +85,19 @@ public class Player
             
             
     }
+    
+    public void addToHand(int x)
+    {
+        player_hand.add(x);
+    }
+    public int getHand(int x)
+    {
+        return player_hand.get(x);
+    }
+    
+    public int sizeHand()
+    {
+        return player_hand.size();
+    }
          
 }

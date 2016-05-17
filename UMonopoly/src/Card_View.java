@@ -26,6 +26,10 @@ public class Card_View extends javax.swing.JComponent {
             firePropertyChange("ID karty", oldID, ID);  
             switch(ID)
         {
+                case 0:
+                jLabel1.setText("czemu");
+                jLabel2.setText("nie dizala");
+           
             case 2:
                 jLabel1.setText(ID+"");
                 jLabel2.setText("Kierunek Projektowanie mebli i wyrobów drewnianych");
@@ -163,7 +167,7 @@ public class Card_View extends javax.swing.JComponent {
                 break;
             case 40:
                 jLabel1.setText(ID+"");
-                jLabel2.setText("Kierunek Malarstwo");
+                jLabel2.setText("Kierunek Informatyka");
                 jLabel2.setToolTipText("<html><img src=\"" +Card_View.class.getResource(ID+".png")+"\">");
                 break;
            

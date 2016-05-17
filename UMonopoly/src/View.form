@@ -14,12 +14,14 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                          <Component id="jl_dawid" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
-                              <Component id="jl_autorzy" min="-2" pref="159" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jl_dawid" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="jl_autorzy" min="-2" pref="159" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -123,6 +125,96 @@
         </Component>
       </SubComponents>
     </Container>
+    <Container class="javax.swing.JDialog" name="Jd_kupP">
+      <Properties>
+        <Property name="title" type="java.lang.String" value="Kup Pole"/>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[333, 200]"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace pref="55" max="32767" attributes="0"/>
+                  <Component id="jButton2" min="-2" pref="84" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="jButton5" min="-2" pref="97" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+              </Group>
+              <Component id="jL_kupP" alignment="0" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jL_kupP" min="-2" pref="37" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButton5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="15" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jL_kupP">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Czy chcesz kupic?"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Tak"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nie"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JDialog" name="jD_kupD">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
+    <Container class="javax.swing.JDialog" name="jD_zaplac">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar">
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jm_plik">
@@ -199,10 +291,10 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jp_Game" alignment="0" pref="1397" max="32767" attributes="0"/>
+          <Component id="jp_Game" alignment="0" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Component id="jp_settings" alignment="0" pref="1397" max="32767" attributes="0"/>
-              <Component id="jp_start" alignment="0" pref="1397" max="32767" attributes="0"/>
+              <Component id="jp_settings" alignment="0" max="32767" attributes="0"/>
+              <Component id="jp_start" alignment="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -240,7 +332,7 @@
                           <Component id="jPanel5" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="0" pref="329" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="298" max="32767" attributes="0"/>
                           <Component id="jl_Ustawienia" min="-2" pref="748" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
                           <Component id="jl_logoSettings" min="-2" pref="177" max="-2" attributes="0"/>
@@ -258,28 +350,28 @@
                           <Component id="jl_iloscGraczy" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
-                                  <Component id="jl_kolorGracza1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="jl_kolorGracza2" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jT_gracz1" min="-2" pref="77" max="-2" attributes="0"/>
+                              <Component id="jT_gracz3" min="-2" pref="68" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="jcb_gracz1" pref="87" max="32767" attributes="0"/>
                               <Component id="jcb_gracz2" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="238" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="236" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jT_gracz4" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jT_gracz2" min="-2" pref="67" max="-2" attributes="0"/>
+                          </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="jl_kolorGracza3" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jcb_gracz3" min="-2" pref="77" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="jl_kolorGracza4" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                                   <Component id="jcb_gracz4" min="-2" pref="77" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -311,37 +403,31 @@
                           <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jcb_gracz1" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                              <Component id="jl_kolorGracza1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jT_gracz1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jl_kolorGracza3" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jcb_gracz3" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="jT_gracz2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                  <Component id="jl_kolorGracza2" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jcb_gracz2" min="-2" pref="30" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jcb_gracz2" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="jT_gracz3" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="separate" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jl_kolorGracza4" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jcb_gracz4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="jT_gracz4" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
                       </Group>
@@ -425,30 +511,6 @@
             <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="js_ileGraczyStateChanged"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jl_kolorGracza1">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="ff" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Gracz1"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jl_kolorGracza2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Gracz3"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jl_kolorGracza3">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Gracz2"/>
-            <Property name="toolTipText" type="java.lang.String" value=""/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jl_kolorGracza4">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Gracz4"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JComboBox" name="jcb_gracz1">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
@@ -517,6 +579,26 @@
             <Property name="text" type="java.lang.String" value="Podaj liczb&#x119; graczy (2 - 4 osoby)"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JTextField" name="jT_gracz1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Gracz1"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jT_gracz2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Gracz2"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jT_gracz3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Gracz3"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jT_gracz4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Gracz4"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="jp_Game">
@@ -529,10 +611,18 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="823" max="32767" attributes="0"/>
-                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <EmptySpace pref="736" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="card_View1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="347" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
@@ -545,10 +635,12 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                  <Component id="jPanel2" max="32767" attributes="0"/>
-                  <EmptySpace min="-2" pref="369" max="-2" attributes="0"/>
+                  <Component id="jPanel2" min="-2" pref="340" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="card_View1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="352" max="32767" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
@@ -609,14 +701,17 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jPanel4" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jScrollPane1" alignment="1" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="14" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="553" max="-2" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -628,7 +723,7 @@
                           <Component id="jPanel3" max="32767" attributes="0"/>
                           <Component id="jPanel4" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -747,9 +842,7 @@
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace min="0" pref="55" max="32767" attributes="0"/>
-                                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                           <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
@@ -768,9 +861,17 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
-                                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -813,7 +914,7 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Times New Roman" size="18" style="1"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Ranking:"/>
+                    <Property name="text" type="java.lang.String" value="Fundsze:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel5">
@@ -905,6 +1006,8 @@
             </Container>
           </SubComponents>
         </Container>
+        <Component class="Card_View" name="card_View1">
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="jp_start">

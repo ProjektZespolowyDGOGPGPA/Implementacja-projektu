@@ -38,6 +38,12 @@ public class View extends javax.swing.JFrame {
         jl_pawel = new javax.swing.JLabel();
         jl_patryk = new javax.swing.JLabel();
         jb_zakoncz = new javax.swing.JButton();
+        Jd_kupP = new javax.swing.JDialog();
+        jL_kupP = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jD_kupD = new javax.swing.JDialog();
+        jD_zaplac = new javax.swing.JDialog();
         jp_settings = new javax.swing.JPanel();
         jl_Ustawienia = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
@@ -45,15 +51,15 @@ public class View extends javax.swing.JFrame {
         jl_logoSettings = new javax.swing.JLabel();
         jcb_graNaCzas = new javax.swing.JCheckBox();
         js_ileGraczy = new javax.swing.JSpinner();
-        jl_kolorGracza1 = new javax.swing.JLabel();
-        jl_kolorGracza2 = new javax.swing.JLabel();
-        jl_kolorGracza3 = new javax.swing.JLabel();
-        jl_kolorGracza4 = new javax.swing.JLabel();
         jcb_gracz1 = new javax.swing.JComboBox<>();
         jcb_gracz2 = new javax.swing.JComboBox<>();
         jcb_gracz3 = new javax.swing.JComboBox<>();
         jcb_gracz4 = new javax.swing.JComboBox<>();
         jl_iloscGraczy = new javax.swing.JLabel();
+        jT_gracz1 = new javax.swing.JTextField();
+        jT_gracz2 = new javax.swing.JTextField();
+        jT_gracz3 = new javax.swing.JTextField();
+        jT_gracz4 = new javax.swing.JTextField();
         jp_Game = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -76,6 +82,7 @@ public class View extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        card_View1 = new Card_View();
         jp_start = new javax.swing.JPanel();
         jb_Start1 = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
@@ -119,12 +126,13 @@ public class View extends javax.swing.JFrame {
             jDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDialogLayout.createSequentialGroup()
                 .addGroup(jDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jl_dawid)
-                        .addGroup(jDialogLayout.createSequentialGroup()
-                            .addGap(157, 157, 157)
-                            .addComponent(jl_autorzy, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(19, 19, 19)))
+                    .addGroup(jDialogLayout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addGroup(jDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jl_dawid)
+                            .addGroup(jDialogLayout.createSequentialGroup()
+                                .addComponent(jl_autorzy, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(19, 19, 19))))
                     .addGroup(jDialogLayout.createSequentialGroup()
                         .addGap(176, 176, 176)
                         .addGroup(jDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,6 +164,71 @@ public class View extends javax.swing.JFrame {
                 .addGap(39, 39, 39)
                 .addComponent(jb_zakoncz, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(278, Short.MAX_VALUE))
+        );
+
+        Jd_kupP.setTitle("Kup Pole");
+        Jd_kupP.setMinimumSize(new java.awt.Dimension(333, 200));
+
+        jL_kupP.setText("Czy chcesz kupic?");
+
+        jButton2.setText("Tak");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setText("Nie");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Jd_kupPLayout = new javax.swing.GroupLayout(Jd_kupP.getContentPane());
+        Jd_kupP.getContentPane().setLayout(Jd_kupPLayout);
+        Jd_kupPLayout.setHorizontalGroup(
+            Jd_kupPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Jd_kupPLayout.createSequentialGroup()
+                .addContainerGap(55, Short.MAX_VALUE)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57))
+            .addComponent(jL_kupP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        Jd_kupPLayout.setVerticalGroup(
+            Jd_kupPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Jd_kupPLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jL_kupP, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(Jd_kupPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton5))
+                .addContainerGap(15, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jD_kupDLayout = new javax.swing.GroupLayout(jD_kupD.getContentPane());
+        jD_kupD.getContentPane().setLayout(jD_kupDLayout);
+        jD_kupDLayout.setHorizontalGroup(
+            jD_kupDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jD_kupDLayout.setVerticalGroup(
+            jD_kupDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jD_zaplacLayout = new javax.swing.GroupLayout(jD_zaplac.getContentPane());
+        jD_zaplac.getContentPane().setLayout(jD_zaplacLayout);
+        jD_zaplacLayout.setHorizontalGroup(
+            jD_zaplacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jD_zaplacLayout.setVerticalGroup(
+            jD_zaplacLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -214,16 +287,6 @@ public class View extends javax.swing.JFrame {
             }
         });
 
-        jl_kolorGracza1.setBackground(new java.awt.Color(255, 0, 0));
-        jl_kolorGracza1.setText("Gracz1");
-
-        jl_kolorGracza2.setText("Gracz3");
-
-        jl_kolorGracza3.setText("Gracz2");
-        jl_kolorGracza3.setToolTipText("");
-
-        jl_kolorGracza4.setText("Gracz4");
-
         jcb_gracz1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gracz1", "Gracz2", "Gracz3", "Gracz4" }));
 
         jcb_gracz2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gracz1", "Gracz2", "Gracz3", "Gracz4" }));
@@ -235,6 +298,14 @@ public class View extends javax.swing.JFrame {
         jl_iloscGraczy.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jl_iloscGraczy.setText("Podaj liczbę graczy (2 - 4 osoby)");
 
+        jT_gracz1.setText("Gracz1");
+
+        jT_gracz2.setText("Gracz2");
+
+        jT_gracz3.setText("Gracz3");
+
+        jT_gracz4.setText("Gracz4");
+
         javax.swing.GroupLayout jp_settingsLayout = new javax.swing.GroupLayout(jp_settings);
         jp_settings.setLayout(jp_settingsLayout);
         jp_settingsLayout.setHorizontalGroup(
@@ -245,7 +316,7 @@ public class View extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jp_settingsLayout.createSequentialGroup()
-                        .addGap(0, 329, Short.MAX_VALUE)
+                        .addGap(0, 298, Short.MAX_VALUE)
                         .addComponent(jl_Ustawienia, javax.swing.GroupLayout.PREFERRED_SIZE, 748, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(133, 133, 133)
                         .addComponent(jl_logoSettings, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -259,24 +330,24 @@ public class View extends javax.swing.JFrame {
                         .addGap(29, 29, 29)
                         .addComponent(jl_iloscGraczy))
                     .addGroup(jp_settingsLayout.createSequentialGroup()
-                        .addGroup(jp_settingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jp_settingsLayout.createSequentialGroup()
-                                .addGap(92, 92, 92)
-                                .addComponent(jl_kolorGracza1))
-                            .addComponent(jl_kolorGracza2, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(35, 35, 35)
+                        .addGroup(jp_settingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jT_gracz1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jT_gracz3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
                         .addGroup(jp_settingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jcb_gracz1, 0, 87, Short.MAX_VALUE)
                             .addComponent(jcb_gracz2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(238, 238, 238)
+                        .addGap(236, 236, 236)
+                        .addGroup(jp_settingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jT_gracz4, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jT_gracz2, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jp_settingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jp_settingsLayout.createSequentialGroup()
-                                .addComponent(jl_kolorGracza3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(18, 18, 18)
                                 .addComponent(jcb_gracz3, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jp_settingsLayout.createSequentialGroup()
-                                .addComponent(jl_kolorGracza4)
-                                .addGap(18, 18, 18)
+                                .addGap(32, 32, 32)
                                 .addComponent(jcb_gracz4, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -299,28 +370,24 @@ public class View extends javax.swing.JFrame {
                         .addGap(51, 51, 51)
                         .addGroup(jp_settingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jcb_gracz1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jl_kolorGracza1)))
+                            .addComponent(jT_gracz1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jp_settingsLayout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addGroup(jp_settingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jl_kolorGracza3)
-                            .addComponent(jcb_gracz3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jcb_gracz3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jT_gracz2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(76, 76, 76)
                 .addGroup(jp_settingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jp_settingsLayout.createSequentialGroup()
-                        .addGroup(jp_settingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jp_settingsLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jl_kolorGracza2))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_settingsLayout.createSequentialGroup()
-                                .addComponent(jcb_gracz2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(26, 26, 26)))
-                        .addGap(18, 18, Short.MAX_VALUE))
+                        .addGroup(jp_settingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jcb_gracz2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jT_gracz3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_settingsLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jp_settingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jl_kolorGracza4)
-                            .addComponent(jcb_gracz4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jcb_gracz4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jT_gracz4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(108, 108, 108)))
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(86, 86, 86))
@@ -403,7 +470,7 @@ public class View extends javax.swing.JFrame {
         );
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel4.setText("Ranking:");
+        jLabel4.setText("Fundsze:");
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel5.setText("Gracz 1");
@@ -443,9 +510,7 @@ public class View extends javax.swing.JFrame {
                                 .addComponent(jLabel4)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                                .addGap(0, 55, Short.MAX_VALUE)
-                                .addComponent(jLabel8)
-                                .addGap(123, 123, 123)
+                                .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(jLabel12))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(55, 55, 55)
@@ -458,9 +523,14 @@ public class View extends javax.swing.JFrame {
                                     .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)))))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(110, 110, 110)
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel11)))
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabel8)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel11)))))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -507,7 +577,9 @@ public class View extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 14, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 553, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -517,17 +589,22 @@ public class View extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jp_GameLayout = new javax.swing.GroupLayout(jp_Game);
         jp_Game.setLayout(jp_GameLayout);
         jp_GameLayout.setHorizontalGroup(
             jp_GameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_GameLayout.createSequentialGroup()
-                .addContainerGap(823, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(63, 63, 63))
+            .addGroup(jp_GameLayout.createSequentialGroup()
+                .addContainerGap(736, Short.MAX_VALUE)
+                .addGroup(jp_GameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_GameLayout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(63, 63, 63))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_GameLayout.createSequentialGroup()
+                        .addComponent(card_View1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(347, 347, 347))))
             .addGroup(jp_GameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jp_GameLayout.createSequentialGroup()
                     .addContainerGap()
@@ -538,8 +615,10 @@ public class View extends javax.swing.JFrame {
             jp_GameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp_GameLayout.createSequentialGroup()
                 .addGap(34, 34, 34)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(369, 369, 369))
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(card_View1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(352, Short.MAX_VALUE))
             .addGroup(jp_GameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jp_GameLayout.createSequentialGroup()
                     .addContainerGap()
@@ -616,10 +695,10 @@ public class View extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jp_Game, javax.swing.GroupLayout.DEFAULT_SIZE, 1397, Short.MAX_VALUE)
+            .addComponent(jp_Game, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jp_settings, javax.swing.GroupLayout.DEFAULT_SIZE, 1397, Short.MAX_VALUE)
-                .addComponent(jp_start, javax.swing.GroupLayout.DEFAULT_SIZE, 1397, Short.MAX_VALUE))
+                .addComponent(jp_settings, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jp_start, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -628,7 +707,7 @@ public class View extends javax.swing.JFrame {
                 .addComponent(jp_Game, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addComponent(jp_settings, javax.swing.GroupLayout.PREFERRED_SIZE, 648, Short.MAX_VALUE)
+                    .addComponent(jp_settings, javax.swing.GroupLayout.DEFAULT_SIZE, 648, Short.MAX_VALUE)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(jp_start, javax.swing.GroupLayout.DEFAULT_SIZE, 518, Short.MAX_VALUE)))
         );
@@ -641,6 +720,23 @@ public class View extends javax.swing.JFrame {
         jTextArea1.setText(silnik.getLog());
         jButton1.setEnabled(false);
         jButton3.setEnabled(true);
+        
+        if (silnik.getPole(silnik.getGracze(silnik.getIdAktywny()).getWhere()).getOwner()=="oskar")
+        {
+            jL_kupP.setText("Czy chcesz kupic " + silnik.getPole(silnik.getGracze(silnik.getIdAktywny()).getWhere()).getName()+"?");
+            Jd_kupP.setVisible(true);
+            
+        }
+        
+        if (silnik.getPole(silnik.getGracze(silnik.getIdAktywny()).getWhere()).getOwner()==silnik.getGracze(silnik.getIdAktywny()).getName());
+        {
+            
+        }
+        
+        if (silnik.getPole(silnik.getGracze(silnik.getIdAktywny()).getWhere()).getOwner()!=silnik.getGracze(silnik.getIdAktywny()).getName() && silnik.getPole(silnik.getGracze(silnik.getIdAktywny()).getWhere()).getOwner()!="oskar")
+        {
+            
+        }
        
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -651,6 +747,7 @@ public class View extends javax.swing.JFrame {
        jButton3.setEnabled(false);
        jLabel2.setText(silnik.getAktywnyPlayer().getName());
        jLabel3.setText(silnik.getAktywnyPlayer().getMoney().toString());
+       
        
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -663,15 +760,51 @@ public class View extends javax.swing.JFrame {
         jp_Game.setVisible(true);
         if(Integer.parseInt(js_ileGraczy.getValue().toString())==2)
         {
-            silnik = new Engine(Integer.parseInt(js_ileGraczy.getValue().toString()),jcb_gracz1.getSelectedItem().toString(),jcb_gracz3.getSelectedItem().toString());
+            silnik = new Engine(Integer.parseInt(js_ileGraczy.getValue().toString()),jT_gracz1.getText(),jcb_gracz1.getSelectedItem().toString(),jT_gracz2.getText(),jcb_gracz3.getSelectedItem().toString());
+            jLabel5.setVisible(true);
+            jLabel5.setText(jT_gracz1.getText());
+            jLabel6.setVisible(true);
+            jLabel6.setText(jT_gracz2.getText());
+            jLabel7.setVisible(false);
+            jLabel8.setVisible(false);
+            jLabel9.setText(silnik.getGracze(0).getMoney().toString());
+            jLabel10.setText(silnik.getGracze(1).getMoney().toString());
+            jLabel11.setVisible(false);
+            jLabel12.setVisible(false);
+                    
         }
         if(Integer.parseInt(js_ileGraczy.getValue().toString())==3)
         {
-            silnik = new Engine(Integer.parseInt(js_ileGraczy.getValue().toString()),jcb_gracz1.getSelectedItem().toString(),jcb_gracz3.getSelectedItem().toString(),jcb_gracz2.getSelectedItem().toString());
+            silnik = new Engine(Integer.parseInt(js_ileGraczy.getValue().toString()),jT_gracz1.getText(),jcb_gracz1.getSelectedItem().toString(),jT_gracz2.getText(),jcb_gracz3.getSelectedItem().toString(),jT_gracz3.getText(),jcb_gracz2.getSelectedItem().toString());
+            jLabel5.setVisible(true);
+            jLabel5.setText(jT_gracz1.getText());
+            jLabel6.setVisible(true);
+            jLabel6.setText(jT_gracz2.getText());
+            jLabel7.setVisible(true);
+            jLabel7.setText(jT_gracz3.getText());
+            jLabel9.setText(silnik.getGracze(0).getMoney().toString());
+            jLabel10.setText(silnik.getGracze(1).getMoney().toString());
+            jLabel11.setText(silnik.getGracze(2).getMoney().toString());
+            
+            jLabel8.setVisible(false);
+            jLabel12.setVisible(false);
         }
         if(Integer.parseInt(js_ileGraczy.getValue().toString())==4)
         {
-            silnik = new Engine(Integer.parseInt(js_ileGraczy.getValue().toString()),jcb_gracz1.getSelectedItem().toString(),jcb_gracz3.getSelectedItem().toString(),jcb_gracz2.getSelectedItem().toString(),jcb_gracz4.getSelectedItem().toString());
+            silnik = new Engine(Integer.parseInt(js_ileGraczy.getValue().toString()),jT_gracz1.getText(),jcb_gracz1.getSelectedItem().toString(),jT_gracz2.getText(),jcb_gracz3.getSelectedItem().toString(),jT_gracz3.getText(),jcb_gracz2.getSelectedItem().toString(),jT_gracz4.getText(),jcb_gracz4.getSelectedItem().toString());
+            jLabel5.setVisible(true);
+            jLabel5.setText(jT_gracz1.getText());
+            jLabel6.setVisible(true);
+            jLabel6.setText(jT_gracz2.getText());
+            jLabel7.setVisible(true);
+            jLabel7.setText(jT_gracz3.getText());
+            jLabel8.setVisible(true);
+            jLabel8.setText(jT_gracz4.getText());
+            jLabel9.setText(silnik.getGracze(0).getMoney().toString());
+            jLabel10.setText(silnik.getGracze(1).getMoney().toString());
+            jLabel11.setText(silnik.getGracze(2).getMoney().toString());
+            jLabel12.setText(silnik.getGracze(3).getMoney().toString());
+            
         }
         jLabel2.setText(silnik.getAktywnyPlayer().getName());
         jLabel3.setText(silnik.getAktywnyPlayer().getMoney()+"");
@@ -684,8 +817,8 @@ public class View extends javax.swing.JFrame {
     private void jb_Start1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_Start1ActionPerformed
         jp_start.setVisible(false);
         jp_settings.setVisible(true);
-        jl_kolorGracza4.setVisible(false);
-        jl_kolorGracza2.setVisible(false);
+        jT_gracz3.setVisible(false);
+        jT_gracz4.setVisible(false);
         jcb_gracz2.setVisible(false);
         jcb_gracz4.setVisible(false);
         
@@ -721,26 +854,46 @@ public class View extends javax.swing.JFrame {
         {
             jcb_gracz2.setVisible(false);
             jcb_gracz4.setVisible(false);
-            jl_kolorGracza2.setVisible(false);
-            jl_kolorGracza4.setVisible(false);
+            jT_gracz3.setVisible(false);
+            jT_gracz4.setVisible(false);
            
         }
         if (Integer.parseInt(js_ileGraczy.getValue().toString())==3)
         {
             jcb_gracz2.setVisible(true);
-            jl_kolorGracza2.setVisible(true);
+            jT_gracz3.setVisible(true);
             jcb_gracz4.setVisible(false);
-            jl_kolorGracza4.setVisible(false);
+            jT_gracz4.setVisible(false);
             
         }
          if (Integer.parseInt(js_ileGraczy.getValue().toString())==4)
         {
             
             jcb_gracz4.setVisible(true);
-            jl_kolorGracza4.setVisible(true);
+            jT_gracz4.setVisible(true);
           
         }
     }//GEN-LAST:event_js_ileGraczyStateChanged
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        Jd_kupP.setVisible(false);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       Jd_kupP.setVisible(false);
+       silnik.getPole(silnik.getGracze(silnik.getIdAktywny()).getWhere()).setOwner(silnik.getGracze(silnik.getIdAktywny()).getName());
+       silnik.getGracze(silnik.getIdAktywny()).setMoney(silnik.getGracze(silnik.getIdAktywny()).getMoney()-silnik.getPole(silnik.getGracze(silnik.getIdAktywny()).getWhere()).getBuy_out());        
+       silnik.setLog(silnik.getLog()+"\n"+silnik.getGracze(silnik.getIdAktywny()).getName()+" Kupil "+ silnik.getPole(silnik.getGracze(silnik.getIdAktywny()).getWhere()).getName());
+       silnik.getAktywnyPlayer().addToHand(silnik.getPole(silnik.getGracze(silnik.getIdAktywny()).getWhere()).getID());
+       jLabel3.setText(silnik.getAktywnyPlayer().getMoney().toString());
+       jTextArea1.setText(silnik.getLog());
+       
+       
+       
+       
+       
+       
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -778,10 +931,17 @@ public class View extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDialog Jd_kupP;
+    private Card_View card_View1;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JDialog jD_kupD;
+    private javax.swing.JDialog jD_zaplac;
     private javax.swing.JDialog jDialog;
+    private javax.swing.JLabel jL_kupP;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -802,6 +962,10 @@ public class View extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jT_gracz1;
+    private javax.swing.JTextField jT_gracz2;
+    private javax.swing.JTextField jT_gracz3;
+    private javax.swing.JTextField jT_gracz4;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton jb_Start;
     private javax.swing.JButton jb_Start1;
@@ -815,10 +979,6 @@ public class View extends javax.swing.JFrame {
     private javax.swing.JLabel jl_autorzy;
     private javax.swing.JLabel jl_dawid;
     private javax.swing.JLabel jl_iloscGraczy;
-    private javax.swing.JLabel jl_kolorGracza1;
-    private javax.swing.JLabel jl_kolorGracza2;
-    private javax.swing.JLabel jl_kolorGracza3;
-    private javax.swing.JLabel jl_kolorGracza4;
     private javax.swing.JLabel jl_logo;
     private javax.swing.JLabel jl_logoSettings;
     private javax.swing.JLabel jl_oskar;
