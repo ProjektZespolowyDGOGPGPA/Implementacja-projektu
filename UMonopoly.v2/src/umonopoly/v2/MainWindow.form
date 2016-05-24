@@ -407,9 +407,9 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jp_Start" alignment="0" pref="1561" max="32767" attributes="0"/>
+          <Component id="jp_Start" alignment="0" pref="2188" max="32767" attributes="0"/>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Component id="jp_Ustawienia" alignment="1" pref="1561" max="32767" attributes="0"/>
+              <Component id="jp_Ustawienia" alignment="1" pref="2188" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
               <Component id="jp_Gra" alignment="0" max="32767" attributes="0"/>
@@ -443,24 +443,29 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="jp_Plansza" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jp_Plansza" min="-2" pref="744" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jScrollPane1" max="32767" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jl_AktywnyGracz" alignment="0" min="-2" pref="303" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="jb_Roll" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jb_Eot" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="player_Hand2" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jl_AktywnyGracz" alignment="0" min="-2" pref="303" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="jb_Roll" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jb_Eot" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jl_Fundusze" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane2" min="-2" pref="186" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jl_Fundusze" min="-2" max="-2" attributes="0"/>
-                              <Component id="jScrollPane2" min="-2" pref="186" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="333" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="921" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -471,7 +476,6 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jp_Plansza" min="-2" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Component id="jScrollPane1" min="-2" pref="195" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
@@ -488,9 +492,12 @@
                               </Group>
                               <Component id="jScrollPane2" min="-2" pref="122" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="player_Hand2" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <Component id="jp_Plansza" alignment="0" min="-2" pref="745" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="0" pref="679" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="595" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -498,31 +505,219 @@
       <SubComponents>
         <Container class="javax.swing.JPanel" name="jp_Plansza">
 
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="jl_Plansza" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="jl_Plansza" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+            <Property name="useNullLayout" type="boolean" value="false"/>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jl_Plansza">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/umonopoly/v2/monopoly.PNG"/>
-                </Property>
-              </Properties>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip2">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="80" y="280" width="20" height="50"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip3">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="540" y="620" width="60" height="-1"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip4">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="430" y="620" width="60" height="40"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip5">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="320" y="630" width="60" height="20"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip6">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="100" y="610" width="50" height="40"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip7">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="260" y="630" width="60" height="20"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip8">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="160" y="630" width="50" height="20"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip9">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="80" y="570" width="30" height="50"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip10">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="80" y="450" width="20" height="50"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip11">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="80" y="280" width="20" height="50"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip12">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="80" y="110" width="20" height="50"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip13">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="80" y="340" width="20" height="50"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip14">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="80" y="160" width="20" height="50"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip15">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="80" y="510" width="20" height="50"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip16">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="80" y="400" width="20" height="50"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip17">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="600" y="560" width="50" height="50"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip19">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="600" y="450" width="40" height="50"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip21">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="610" y="330" width="40" height="50"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip22">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="600" y="280" width="50" height="50"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip23">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="600" y="160" width="40" height="50"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip24">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="600" y="100" width="40" height="50"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip18">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="490" y="80" width="50" height="20"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip20">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="380" y="80" width="50" height="20"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip25">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="320" y="80" width="60" height="20"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip26">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="270" y="80" width="50" height="20"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip28">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="210" y="80" width="50" height="20"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip29">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="100" y="80" width="50" height="20"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip30">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="540" y="80" width="60" height="20"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Card_Tooltip" name="card_Tooltip31">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="430" y="80" width="50" height="20"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="umonopoly.v2.Grid" name="grid1">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="-10" y="0" width="750" height="740"/>
+                </Constraint>
+              </Constraints>
             </Component>
           </SubComponents>
         </Container>
@@ -601,6 +796,8 @@
             </Component>
           </SubComponents>
         </Container>
+        <Component class="umonopoly.v2.Player_Hand" name="player_Hand2">
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="jp_Ustawienia">
@@ -682,7 +879,7 @@
                   </Group>
                   <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
                   <Component id="jb_StartGra" min="-2" pref="40" max="-2" attributes="0"/>
-                  <EmptySpace pref="867" max="32767" attributes="0"/>
+                  <EmptySpace pref="490" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

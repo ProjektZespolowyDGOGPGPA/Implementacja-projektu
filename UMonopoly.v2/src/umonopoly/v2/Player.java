@@ -25,7 +25,7 @@ public class Player
     public Player()
     {
         name = "player";
-        where = 1;
+        where = 0;
         player_hand = new ArrayList<Integer>();
         money = 3000.0;
     }
@@ -34,9 +34,9 @@ public class Player
     {
         id=iD;
         name = imie;
-        where = 40;
+        where = 0;
         player_hand = new ArrayList<Integer>();
-        money = 2600.0;
+        money = 3000.0;
         this.kolor = kolor;
     }    
     
@@ -75,7 +75,7 @@ public class Player
 
     public void setWhere(int where) 
     {
-        if(where<41)
+        if(where<40)
         {
             this.where = where;
         }
@@ -100,6 +100,12 @@ public class Player
     {
         return player_hand.size();
     }
+
+    public List<Integer> getPlayer_hand() {
+        return player_hand;
+    }
+    
+    
 
     public int getId() {
         return id;

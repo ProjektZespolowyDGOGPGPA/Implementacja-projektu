@@ -22,6 +22,36 @@ public class MainWindow extends javax.swing.JFrame {
         jp_Ustawienia.setVisible(false);
         jp_Gra.setVisible(false);
         js_LiczbaGraczy.setValue(2);
+        card_Tooltip3.setNr(2);
+        card_Tooltip4.setNr(4);
+        card_Tooltip5.setNr(6);
+        card_Tooltip7.setNr(7);
+        card_Tooltip8.setNr(9);
+        card_Tooltip6.setNr(10);
+        card_Tooltip9.setNr(12);
+        card_Tooltip10.setNr(14);
+        card_Tooltip15.setNr(13);
+        card_Tooltip16.setNr(15);
+        card_Tooltip13.setNr(16);
+        card_Tooltip2.setNr(17);
+        card_Tooltip14.setNr(19);
+        card_Tooltip12.setNr(20);
+        card_Tooltip29.setNr(22);
+        card_Tooltip28.setNr(24);
+        card_Tooltip26.setNr(25);
+        card_Tooltip25.setNr(26);
+        card_Tooltip20.setNr(27);
+        card_Tooltip31.setNr(28);
+        card_Tooltip18.setNr(29);
+        card_Tooltip30.setNr(30);
+        card_Tooltip24.setNr(32);
+        card_Tooltip23.setNr(33);
+        card_Tooltip22.setNr(35);
+        card_Tooltip21.setNr(36);
+        card_Tooltip19.setNr(38);
+        card_Tooltip17.setNr(40);
+        
+        
         
     }
 
@@ -60,7 +90,36 @@ public class MainWindow extends javax.swing.JFrame {
         jb_Zaplac = new javax.swing.JButton();
         jp_Gra = new javax.swing.JPanel();
         jp_Plansza = new javax.swing.JPanel();
-        jl_Plansza = new javax.swing.JLabel();
+        card_Tooltip2 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip3 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip4 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip5 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip6 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip7 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip8 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip9 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip10 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip11 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip12 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip13 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip14 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip15 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip16 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip17 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip19 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip21 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip22 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip23 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip24 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip18 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip20 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip25 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip26 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip28 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip29 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip30 = new umonopoly.v2.Card_Tooltip();
+        card_Tooltip31 = new umonopoly.v2.Card_Tooltip();
+        grid1 = new umonopoly.v2.Grid();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtp_Log = new javax.swing.JTextPane();
         jl_AktywnyGracz = new javax.swing.JLabel();
@@ -69,6 +128,7 @@ public class MainWindow extends javax.swing.JFrame {
         jl_Fundusze = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jta_Fundusze = new javax.swing.JTextArea();
+        player_Hand2 = new umonopoly.v2.Player_Hand();
         jp_Ustawienia = new javax.swing.JPanel();
         jl_Ustawienia = new javax.swing.JLabel();
         js_LiczbaGraczy = new javax.swing.JSpinner();
@@ -332,22 +392,37 @@ public class MainWindow extends javax.swing.JFrame {
 
         jp_Gra.setBackground(new java.awt.Color(0, 255, 255));
 
-        jl_Plansza.setIcon(new javax.swing.ImageIcon(getClass().getResource("/umonopoly/v2/monopoly.PNG"))); // NOI18N
-
-        javax.swing.GroupLayout jp_PlanszaLayout = new javax.swing.GroupLayout(jp_Plansza);
-        jp_Plansza.setLayout(jp_PlanszaLayout);
-        jp_PlanszaLayout.setHorizontalGroup(
-            jp_PlanszaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_PlanszaLayout.createSequentialGroup()
-                .addComponent(jl_Plansza)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jp_PlanszaLayout.setVerticalGroup(
-            jp_PlanszaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_PlanszaLayout.createSequentialGroup()
-                .addComponent(jl_Plansza)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jp_Plansza.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jp_Plansza.add(card_Tooltip2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 20, 50));
+        jp_Plansza.add(card_Tooltip3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 620, 60, -1));
+        jp_Plansza.add(card_Tooltip4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 620, 60, 40));
+        jp_Plansza.add(card_Tooltip5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 630, 60, 20));
+        jp_Plansza.add(card_Tooltip6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 610, 50, 40));
+        jp_Plansza.add(card_Tooltip7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 630, 60, 20));
+        jp_Plansza.add(card_Tooltip8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 630, 50, 20));
+        jp_Plansza.add(card_Tooltip9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 570, 30, 50));
+        jp_Plansza.add(card_Tooltip10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 450, 20, 50));
+        jp_Plansza.add(card_Tooltip11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 20, 50));
+        jp_Plansza.add(card_Tooltip12, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 20, 50));
+        jp_Plansza.add(card_Tooltip13, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 20, 50));
+        jp_Plansza.add(card_Tooltip14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 20, 50));
+        jp_Plansza.add(card_Tooltip15, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 510, 20, 50));
+        jp_Plansza.add(card_Tooltip16, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 20, 50));
+        jp_Plansza.add(card_Tooltip17, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 560, 50, 50));
+        jp_Plansza.add(card_Tooltip19, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 450, 40, 50));
+        jp_Plansza.add(card_Tooltip21, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 330, 40, 50));
+        jp_Plansza.add(card_Tooltip22, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 280, 50, 50));
+        jp_Plansza.add(card_Tooltip23, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 160, 40, 50));
+        jp_Plansza.add(card_Tooltip24, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 100, 40, 50));
+        jp_Plansza.add(card_Tooltip18, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 80, 50, 20));
+        jp_Plansza.add(card_Tooltip20, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, 50, 20));
+        jp_Plansza.add(card_Tooltip25, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, 60, 20));
+        jp_Plansza.add(card_Tooltip26, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 50, 20));
+        jp_Plansza.add(card_Tooltip28, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 50, 20));
+        jp_Plansza.add(card_Tooltip29, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 50, 20));
+        jp_Plansza.add(card_Tooltip30, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, 60, 20));
+        jp_Plansza.add(card_Tooltip31, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 80, 50, 20));
+        jp_Plansza.add(grid1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 750, 740));
 
         jtp_Log.setEditable(false);
         jScrollPane1.setViewportView(jtp_Log);
@@ -387,28 +462,30 @@ public class MainWindow extends javax.swing.JFrame {
         jp_GraLayout.setHorizontalGroup(
             jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp_GraLayout.createSequentialGroup()
-                .addComponent(jp_Plansza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jp_Plansza, javax.swing.GroupLayout.PREFERRED_SIZE, 744, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
                     .addGroup(jp_GraLayout.createSequentialGroup()
-                        .addGroup(jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jl_AktywnyGracz, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jb_Roll, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jb_Eot, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(18, 18, 18)
-                        .addGroup(jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jl_Fundusze)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 333, Short.MAX_VALUE)))
+                        .addGroup(jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(player_Hand2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addGroup(jp_GraLayout.createSequentialGroup()
+                                .addGroup(jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jl_AktywnyGracz, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jb_Roll, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jb_Eot, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGap(18, 18, 18)
+                                .addGroup(jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jl_Fundusze)
+                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 921, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jp_GraLayout.setVerticalGroup(
             jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jp_GraLayout.createSequentialGroup()
                 .addGroup(jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jp_Plansza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jp_GraLayout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -421,8 +498,11 @@ public class MainWindow extends javax.swing.JFrame {
                                 .addComponent(jb_Roll)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jb_Eot))
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 679, Short.MAX_VALUE))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(player_Hand2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jp_Plansza, javax.swing.GroupLayout.PREFERRED_SIZE, 745, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 595, Short.MAX_VALUE))
         );
 
         jp_Ustawienia.setBackground(new java.awt.Color(255, 0, 255));
@@ -523,7 +603,7 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(jcb_KolorGracza4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(85, 85, 85)
                 .addComponent(jb_StartGra, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(867, Short.MAX_VALUE))
+                .addContainerGap(490, Short.MAX_VALUE))
         );
 
         jp_Start.setBackground(new java.awt.Color(0, 255, 0));
@@ -577,9 +657,9 @@ public class MainWindow extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jp_Start, javax.swing.GroupLayout.DEFAULT_SIZE, 1561, Short.MAX_VALUE)
+            .addComponent(jp_Start, javax.swing.GroupLayout.DEFAULT_SIZE, 2188, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jp_Ustawienia, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1561, Short.MAX_VALUE))
+                .addComponent(jp_Ustawienia, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 2188, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jp_Gra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -610,10 +690,13 @@ public class MainWindow extends javax.swing.JFrame {
         jp_Ustawienia.setVisible(true);
         jcb_KolorGracza1.setVisible(true);
         jcb_KolorGracza2.setVisible(true);
+        jcb_KolorGracza2.setSelectedIndex(1);
         jtf_NazwaGracza3.setVisible(false);
         jtf_NazwaGracza4.setVisible(false);
         jcb_KolorGracza3.setVisible(false);
+        jcb_KolorGracza3.setSelectedIndex(2);
         jcb_KolorGracza4.setVisible(false);
+        jcb_KolorGracza4.setSelectedIndex(3);
         jb_StartGra.setVisible(true);
     }//GEN-LAST:event_jb_StartActionPerformed
 
@@ -652,8 +735,14 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_js_LiczbaGraczyStateChanged
 
     private void jb_StartGraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_StartGraActionPerformed
-       jp_Ustawienia.setVisible(false);
+       
+        if(jcb_KolorGracza1.getSelectedIndex()!=jcb_KolorGracza2.getSelectedIndex() && jcb_KolorGracza1.getSelectedIndex()!=jcb_KolorGracza3.getSelectedIndex() && jcb_KolorGracza1.getSelectedIndex()!=jcb_KolorGracza4.getSelectedIndex() && jcb_KolorGracza2.getSelectedIndex()!=jcb_KolorGracza3.getSelectedIndex() && jcb_KolorGracza2.getSelectedIndex()!=jcb_KolorGracza4.getSelectedIndex() && jcb_KolorGracza3.getSelectedIndex()!=jcb_KolorGracza4.getSelectedIndex())
+        {
+            jp_Ustawienia.setVisible(false);
+        
        jp_Gra.setVisible(true);
+       grid1.clean();
+       
        jb_Eot.setEnabled(false);
         if(Integer.parseInt(js_LiczbaGraczy.getValue().toString())==2)
         {
@@ -726,6 +815,27 @@ public class MainWindow extends javax.swing.JFrame {
             
         }
         
+        for(int i=0;i<silnik.getSizeOfPlayer();i++)
+        {
+            if(silnik.getGracze(i).getKolor()=="Czerwony")
+            {
+                grid1.rysujR(silnik.getGracze(i).getWhere());
+            }
+            if(silnik.getGracze(i).getKolor()=="Niebieski")
+            {
+                grid1.rysujB(silnik.getGracze(i).getWhere());
+            }
+            if(silnik.getGracze(i).getKolor()=="Zielony")
+            {
+                grid1.rysujG(silnik.getGracze(i).getWhere());
+            }
+            if(silnik.getGracze(i).getKolor()=="Żółty")
+            {
+                grid1.rysujY(silnik.getGracze(i).getWhere());
+            }
+        }
+        }
+                
     }//GEN-LAST:event_jb_StartGraActionPerformed
 
     private void jb_RollActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_RollActionPerformed
@@ -770,12 +880,30 @@ public class MainWindow extends javax.swing.JFrame {
                 jta_Fundusze.setText(jta_Fundusze.getText()+silnik.getGracze(x).getName()+": "+silnik.getGracze(x).getMoney()+"$\n");
             }
          jl_AktywnyGracz.setText("Aktywny Gracz: "+silnik.getAktywnyPlayer().getName()+" "+silnik.getAktywnyPlayer().getMoney()+"$");
+         
+         if(silnik.getAktywnyPlayer().getKolor()=="Czerwony")
+            {
+                grid1.rysujR(silnik.getAktywnyPlayer().getWhere());
+            }
+            if(silnik.getAktywnyPlayer().getKolor()=="Niebieski")
+            {
+                grid1.rysujB(silnik.getAktywnyPlayer().getWhere());
+            }
+            if(silnik.getAktywnyPlayer().getKolor()=="Zielony")
+            {
+                grid1.rysujG(silnik.getAktywnyPlayer().getWhere());
+            }
+            if(silnik.getAktywnyPlayer().getKolor()=="Żółty")
+            {
+                grid1.rysujY(silnik.getAktywnyPlayer().getWhere());
+            }
     }//GEN-LAST:event_jb_RollActionPerformed
 
     private void jb_EotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_EotActionPerformed
         jb_Roll.setEnabled(true);
         jb_Eot.setEnabled(false);
         silnik.koniecTury();
+        player_Hand2.setPlayer_hand(silnik.getAktywnyPlayer().getPlayer_hand());
         jtp_Log.setText(silnik.getLog());
         jl_AktywnyGracz.setText("Aktywny Gracz: "+silnik.getAktywnyPlayer().getName()+" "+silnik.getAktywnyPlayer().getMoney()+"$");
     }//GEN-LAST:event_jb_EotActionPerformed
@@ -792,11 +920,13 @@ public class MainWindow extends javax.swing.JFrame {
         
         jl_AktywnyGracz.setText("Aktywny Gracz: "+silnik.getAktywnyPlayer().getName()+" "+silnik.getAktywnyPlayer().getMoney()+"$");
         jta_Fundusze.setText("");
+        player_Hand2.setPlayer_hand(silnik.getAktywnyPlayer().getPlayer_hand());
         for(int x=0;x<silnik.getSizeOfPlayer();x++)
             {
                 jta_Fundusze.setText(jta_Fundusze.getText()+silnik.getGracze(x).getName()+": "+silnik.getGracze(x).getMoney()+"$\n");
             }
         jtp_Log.setText(silnik.getLog());
+        
         }
         else
         {
@@ -885,6 +1015,36 @@ public class MainWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private umonopoly.v2.Card_Tooltip card_Tooltip10;
+    private umonopoly.v2.Card_Tooltip card_Tooltip11;
+    private umonopoly.v2.Card_Tooltip card_Tooltip12;
+    private umonopoly.v2.Card_Tooltip card_Tooltip13;
+    private umonopoly.v2.Card_Tooltip card_Tooltip14;
+    private umonopoly.v2.Card_Tooltip card_Tooltip15;
+    private umonopoly.v2.Card_Tooltip card_Tooltip16;
+    private umonopoly.v2.Card_Tooltip card_Tooltip17;
+    private umonopoly.v2.Card_Tooltip card_Tooltip18;
+    private umonopoly.v2.Card_Tooltip card_Tooltip19;
+    private umonopoly.v2.Card_Tooltip card_Tooltip2;
+    private umonopoly.v2.Card_Tooltip card_Tooltip20;
+    private umonopoly.v2.Card_Tooltip card_Tooltip21;
+    private umonopoly.v2.Card_Tooltip card_Tooltip22;
+    private umonopoly.v2.Card_Tooltip card_Tooltip23;
+    private umonopoly.v2.Card_Tooltip card_Tooltip24;
+    private umonopoly.v2.Card_Tooltip card_Tooltip25;
+    private umonopoly.v2.Card_Tooltip card_Tooltip26;
+    private umonopoly.v2.Card_Tooltip card_Tooltip28;
+    private umonopoly.v2.Card_Tooltip card_Tooltip29;
+    private umonopoly.v2.Card_Tooltip card_Tooltip3;
+    private umonopoly.v2.Card_Tooltip card_Tooltip30;
+    private umonopoly.v2.Card_Tooltip card_Tooltip31;
+    private umonopoly.v2.Card_Tooltip card_Tooltip4;
+    private umonopoly.v2.Card_Tooltip card_Tooltip5;
+    private umonopoly.v2.Card_Tooltip card_Tooltip6;
+    private umonopoly.v2.Card_Tooltip card_Tooltip7;
+    private umonopoly.v2.Card_Tooltip card_Tooltip8;
+    private umonopoly.v2.Card_Tooltip card_Tooltip9;
+    private umonopoly.v2.Grid grid1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -917,7 +1077,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jl_LiczbaGraczy;
     private javax.swing.JLabel jl_Logo;
     private javax.swing.JLabel jl_Logo2;
-    private javax.swing.JLabel jl_Plansza;
     private javax.swing.JLabel jl_Rachunek;
     private javax.swing.JLabel jl_Ustawienia;
     private javax.swing.JLabel jl_autorzy;
@@ -937,5 +1096,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField jtf_NazwaGracza3;
     private javax.swing.JTextField jtf_NazwaGracza4;
     private javax.swing.JTextPane jtp_Log;
+    private umonopoly.v2.Player_Hand player_Hand2;
     // End of variables declaration//GEN-END:variables
 }

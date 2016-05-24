@@ -134,7 +134,7 @@ public class Engine
             gracze.get(aktywny_gracz).setMoney(gracze.get(aktywny_gracz).getMoney()+400);
         }
         gracze.get(aktywny_gracz).setWhere(gracze.get(aktywny_gracz).getWhere()+randomNum);
-        log=log + "\n" + gracze.get(aktywny_gracz).getName()+" wyrzucił "+ randomNum + " i przesuwa sie na pole "+gracze.get(aktywny_gracz).getWhere(); 
+        log=log + "\n" + gracze.get(aktywny_gracz).getName()+" wyrzucił "+ randomNum + " i przesuwa sie na pole "+(gracze.get(aktywny_gracz).getWhere()+1); 
     }
 }
 
