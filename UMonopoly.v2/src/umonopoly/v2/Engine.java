@@ -124,11 +124,22 @@ public class Engine
         return gracze.size();
     }
     
-    public void random2k6()
+    public void random2k6(int x)
     {
         Random ran = new Random();
         Random ran1 = new Random();
-        int randomNum = (ran.nextInt(5) + 1) + ran1.nextInt(5) + 1;
+        
+        int randomNum = 0;
+        if (x<=0)
+        {
+            x=1;
+        }
+        randomNum = (ran.nextInt(5) + 1) + ran1.nextInt(5) + 1;
+        for(int z=0;z<x;z++)
+        {
+            randomNum = (ran.nextInt(5) + 1) + ran1.nextInt(5) + 1;
+        }
+       
         if(gracze.get(aktywny_gracz).getWhere()+randomNum>40)
         {
             gracze.get(aktywny_gracz).setMoney(gracze.get(aktywny_gracz).getMoney()+400);

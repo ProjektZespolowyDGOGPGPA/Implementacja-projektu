@@ -5,7 +5,9 @@
  */
 package umonopoly.v2;
 
+import java.util.Random;
 import java.util.Vector;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -125,10 +127,14 @@ public class MainWindow extends javax.swing.JFrame {
         jl_AktywnyGracz = new javax.swing.JLabel();
         jb_Roll = new javax.swing.JButton();
         jb_Eot = new javax.swing.JButton();
-        jl_Fundusze = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jta_Fundusze = new javax.swing.JTextArea();
         player_Hand2 = new umonopoly.v2.Player_Hand();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         jp_Ustawienia = new javax.swing.JPanel();
         jl_Ustawienia = new javax.swing.JLabel();
         js_LiczbaGraczy = new javax.swing.JSpinner();
@@ -214,7 +220,6 @@ public class MainWindow extends javax.swing.JFrame {
 
         jd_KupP.setTitle("Kup pole");
         jd_KupP.setMinimumSize(new java.awt.Dimension(420, 200));
-        jd_KupP.setPreferredSize(new java.awt.Dimension(420, 200));
 
         jl_KupP.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jl_KupP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -446,16 +451,29 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        jl_Fundusze.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jl_Fundusze.setText("Fundusze:");
-
         jta_Fundusze.setEditable(false);
         jta_Fundusze.setBackground(new java.awt.Color(0, 255, 255));
         jta_Fundusze.setColumns(20);
         jta_Fundusze.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jta_Fundusze.setLineWrap(true);
         jta_Fundusze.setRows(5);
+        jta_Fundusze.setBorder(javax.swing.BorderFactory.createTitledBorder("Fundusze"));
         jScrollPane2.setViewportView(jta_Fundusze);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/umonopoly/v2/pionek red.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/umonopoly/v2/Niebieski2.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/umonopoly/v2/pionek green.png"))); // NOI18N
+        jLabel3.setText("jLabel3");
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/umonopoly/v2/pionek yellow.png"))); // NOI18N
+        jLabel4.setText("jLabel4");
+
+        jTextField1.setText("1");
+        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder("Ile razy losowac"));
 
         javax.swing.GroupLayout jp_GraLayout = new javax.swing.GroupLayout(jp_Gra);
         jp_Gra.setLayout(jp_GraLayout);
@@ -467,19 +485,28 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGroup(jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
                     .addGroup(jp_GraLayout.createSequentialGroup()
-                        .addGroup(jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(player_Hand2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addGroup(jp_GraLayout.createSequentialGroup()
+                        .addGroup(jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(player_Hand2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 661, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jl_AktywnyGracz, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jp_GraLayout.createSequentialGroup()
                                 .addGroup(jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jl_AktywnyGracz, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                         .addComponent(jb_Roll, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jb_Eot, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                        .addComponent(jb_Eot, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jl_Fundusze)
-                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 921, Short.MAX_VALUE)))
+                                    .addGroup(jp_GraLayout.createSequentialGroup()
+                                        .addComponent(jLabel1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jLabel2))
+                                    .addGroup(jp_GraLayout.createSequentialGroup()
+                                        .addComponent(jLabel3)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel4)))))
+                        .addGap(0, 767, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jp_GraLayout.setVerticalGroup(
@@ -489,18 +516,29 @@ public class MainWindow extends javax.swing.JFrame {
                     .addGroup(jp_GraLayout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jl_AktywnyGracz, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jl_Fundusze))
+                        .addComponent(jl_AktywnyGracz, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jp_GraLayout.createSequentialGroup()
-                                .addComponent(jb_Roll)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jb_Eot))
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(player_Hand2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jp_GraLayout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jb_Roll)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jb_Eot))
+                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(player_Hand2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jp_GraLayout.createSequentialGroup()
+                                .addGroup(jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel2))
+                                .addGap(18, 18, 18)
+                                .addGroup(jp_GraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4)))))
                     .addComponent(jp_Plansza, javax.swing.GroupLayout.PREFERRED_SIZE, 745, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 595, Short.MAX_VALUE))
         );
@@ -735,7 +773,11 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_js_LiczbaGraczyStateChanged
 
     private void jb_StartGraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_StartGraActionPerformed
-       
+        jLabel1.setVisible(false);
+        jLabel2.setVisible(false);
+        jLabel3.setVisible(false);
+        jLabel4.setVisible(false);
+
         if(jcb_KolorGracza1.getSelectedIndex()!=jcb_KolorGracza2.getSelectedIndex() && jcb_KolorGracza1.getSelectedIndex()!=jcb_KolorGracza3.getSelectedIndex() && jcb_KolorGracza1.getSelectedIndex()!=jcb_KolorGracza4.getSelectedIndex() && jcb_KolorGracza2.getSelectedIndex()!=jcb_KolorGracza3.getSelectedIndex() && jcb_KolorGracza2.getSelectedIndex()!=jcb_KolorGracza4.getSelectedIndex() && jcb_KolorGracza3.getSelectedIndex()!=jcb_KolorGracza4.getSelectedIndex())
         {
             jp_Ustawienia.setVisible(false);
@@ -820,29 +862,102 @@ public class MainWindow extends javax.swing.JFrame {
             if(silnik.getGracze(i).getKolor()=="Czerwony")
             {
                 grid1.rysujR(silnik.getGracze(i).getWhere());
+                jLabel1.setVisible(true);
+                jLabel1.setText(silnik.getGracze(i).getName());
             }
             if(silnik.getGracze(i).getKolor()=="Niebieski")
             {
                 grid1.rysujB(silnik.getGracze(i).getWhere());
+                jLabel2.setVisible(true);
+                jLabel2.setText(silnik.getGracze(i).getName());
             }
             if(silnik.getGracze(i).getKolor()=="Zielony")
             {
                 grid1.rysujG(silnik.getGracze(i).getWhere());
+                jLabel3.setVisible(true);
+                jLabel3.setText(silnik.getGracze(i).getName());
             }
             if(silnik.getGracze(i).getKolor()=="Żółty")
             {
                 grid1.rysujY(silnik.getGracze(i).getWhere());
+                jLabel4.setVisible(true);
+                jLabel4.setText(silnik.getGracze(i).getName());
             }
         }
         }
                 
     }//GEN-LAST:event_jb_StartGraActionPerformed
-
+    Boolean cheat =false;
     private void jb_RollActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_RollActionPerformed
         jb_Roll.setEnabled(false);
         jb_Eot.setEnabled(true);
-        silnik.random2k6();
+        if(cheat==true)
+        {
+            silnik.getAktywnyPlayer().setWhere(Integer.parseInt(jTextField1.getText()));
+        }
+        else
+        {
+        silnik.random2k6(Integer.parseInt(jTextField1.getText()));
+        }
+        if(Integer.parseInt(jTextField1.getText())==7681869)
+        {
+            cheat =true;
+        }
+        if(Integer.parseInt(jTextField1.getText())==123456)
+        {
+            cheat =false;
+        }
+        
+        
         jtp_Log.setText(silnik.getLog());
+        
+        if(silnik.getPole(silnik.getAktywnyPlayer().getWhere()).getID()==5)
+        {
+            silnik.getAktywnyPlayer().setMoney(silnik.getAktywnyPlayer().getMoney()-400);
+            
+        }
+        
+        if(silnik.getPole(silnik.getAktywnyPlayer().getWhere()).getID()==39)
+        {
+            silnik.getAktywnyPlayer().setMoney(silnik.getAktywnyPlayer().getMoney()-200);
+           
+        }
+        
+        if(silnik.getPole(silnik.getAktywnyPlayer().getWhere()).getID()==31)
+        {
+            silnik.getAktywnyPlayer().setWhere(10);
+          
+        }
+        
+        if(silnik.getPole(silnik.getAktywnyPlayer().getWhere()).getID()==3 || silnik.getPole(silnik.getAktywnyPlayer().getWhere()).getID()==8 || silnik.getPole(silnik.getAktywnyPlayer().getWhere()).getID()==18 || silnik.getPole(silnik.getAktywnyPlayer().getWhere()).getID()==23 || silnik.getPole(silnik.getAktywnyPlayer().getWhere()).getID()==34 ||silnik.getPole(silnik.getAktywnyPlayer().getWhere()).getID()==37)
+        {
+            Random ran = new Random();
+            int randomNum = ran.nextInt(4)+1;
+            
+            switch (randomNum)
+            {
+                case 1:
+                    JOptionPane.showMessageDialog(jp_Gra, "Wygraleś pokaz mody na juwenaliach +200zl");
+                    silnik.getAktywnyPlayer().setMoney(silnik.getAktywnyPlayer().getMoney()+200);
+                    break;
+                case 2:
+                    JOptionPane.showMessageDialog(jp_Gra, "Placisz skladke ubezpieczeniową -25zl");
+                    silnik.getAktywnyPlayer().setMoney(silnik.getAktywnyPlayer().getMoney()-25);
+                    break;
+                case 3:
+                    JOptionPane.showMessageDialog(jp_Gra, "Masz urodziny dostajesz od kazdego gracza 50zl");
+                    silnik.getAktywnyPlayer().setMoney(silnik.getAktywnyPlayer().getMoney()+(silnik.getSizeOfPlayer()*50));
+                    break;
+                case 4:
+                    JOptionPane.showMessageDialog(jp_Gra, "Fortuna jest po Twojej stronie byle tak dalej!");
+                    break;
+                case 5:
+                    JOptionPane.showMessageDialog(jp_Gra, "Mandat za picie w miejscu publicznym -50");
+                    silnik.getAktywnyPlayer().setMoney(silnik.getAktywnyPlayer().getMoney()-50);
+                    break;                              
+                    
+            }
+        }
         
         if(silnik.getPole(silnik.getAktywnyPlayer().getWhere()).getOwner()!=10)
         {
@@ -1045,9 +1160,14 @@ public class MainWindow extends javax.swing.JFrame {
     private umonopoly.v2.Card_Tooltip card_Tooltip8;
     private umonopoly.v2.Card_Tooltip card_Tooltip9;
     private umonopoly.v2.Grid grid1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JButton jb_Autorzy;
     private javax.swing.JButton jb_Eot;
     private javax.swing.JButton jb_Error;
@@ -1071,7 +1191,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JDialog jd_Rachunek;
     private javax.swing.JLabel jl_AktywnyGracz;
     private javax.swing.JLabel jl_Error;
-    private javax.swing.JLabel jl_Fundusze;
     private javax.swing.JLabel jl_KupD;
     private javax.swing.JLabel jl_KupP;
     private javax.swing.JLabel jl_LiczbaGraczy;

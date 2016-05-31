@@ -6,7 +6,7 @@
 package umonopoly.v2;
 
 import java.util.Vector;
-import javax.swing.ImageIcon;
+
 import javax.swing.JLabel;
 
 /**
@@ -37,8 +37,14 @@ public class Grid extends javax.swing.JComponent {
          {
              czerwony.get(z).setIcon(null);
          }
-          
+         if(x>20)
+         {
+         czerwony.get(x).setIcon(new javax.swing.ImageIcon(getClass().getResource("/umonopoly/v2/czerwonyodwrot.png")));    
+         }
+         else
+         { 
          czerwony.get(x).setIcon(new javax.swing.ImageIcon(getClass().getResource("/umonopoly/v2/pionek red.png")));
+     }
      }
      
      public void rysujG(int x)
@@ -48,7 +54,14 @@ public class Grid extends javax.swing.JComponent {
              zielony.get(z).setIcon(null);
          }
           
+         if(x>20)
+         {
+         zielony.get(x).setIcon(new javax.swing.ImageIcon(getClass().getResource("/umonopoly/v2/zielonyodwrot.png")));    
+         }
+         else
+         {
          zielony.get(x).setIcon(new javax.swing.ImageIcon(getClass().getResource("/umonopoly/v2/pionek green.png")));
+         }
      }
      
      public void rysujB(int x)
@@ -57,9 +70,15 @@ public class Grid extends javax.swing.JComponent {
          {
              niebieski.get(z).setIcon(null);
          }
-          
+         if(x>20)
+         {
+         niebieski.get(x).setIcon(new javax.swing.ImageIcon(getClass().getResource("/umonopoly/v2/niebieskiodwrot.png")));    
+         }
+         else
+         { 
          niebieski.get(x).setIcon(new javax.swing.ImageIcon(getClass().getResource("/umonopoly/v2/Niebieski2.png")));
-     }
+         }
+       }
      
      public void rysujY(int x)
      {
@@ -67,8 +86,15 @@ public class Grid extends javax.swing.JComponent {
          {
              zolty.get(z).setIcon(null);
          }
-          
+         if(x>20)
+         {
+         zolty.get(x).setIcon(new javax.swing.ImageIcon(getClass().getResource("/umonopoly/v2/zoltyodwrot.png")));    
+         }
+         else
+         {
          zolty.get(x).setIcon(new javax.swing.ImageIcon(getClass().getResource("/umonopoly/v2/pionek yellow.png")));
+     
+         }
      }
      
      public Grid() {
