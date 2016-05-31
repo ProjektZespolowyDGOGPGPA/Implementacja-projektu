@@ -219,11 +219,15 @@ public class MainWindow extends javax.swing.JFrame {
         );
 
         jd_KupP.setTitle("Kup pole");
-        jd_KupP.setMinimumSize(new java.awt.Dimension(420, 200));
+        jd_KupP.setMaximumSize(new java.awt.Dimension(650, 200));
+        jd_KupP.setMinimumSize(new java.awt.Dimension(650, 200));
+        jd_KupP.setPreferredSize(new java.awt.Dimension(650, 200));
+        jd_KupP.setSize(new java.awt.Dimension(650, 200));
 
         jl_KupP.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jl_KupP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jl_KupP.setText("Czy chcesz kupic?");
+        jl_KupP.setToolTipText("");
 
         jb_KupTak.setText("Tak");
         jb_KupTak.addActionListener(new java.awt.event.ActionListener() {
@@ -233,6 +237,7 @@ public class MainWindow extends javax.swing.JFrame {
         });
 
         jb_KupNie.setText("Nie");
+        jb_KupNie.setToolTipText("");
         jb_KupNie.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_KupNieActionPerformed(evt);
@@ -243,32 +248,37 @@ public class MainWindow extends javax.swing.JFrame {
         jd_KupP.getContentPane().setLayout(jd_KupPLayout);
         jd_KupPLayout.setHorizontalGroup(
             jd_KupPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_KupPLayout.createSequentialGroup()
+                .addGap(169, 169, 169)
+                .addComponent(jb_KupTak, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                .addGap(59, 59, 59)
+                .addComponent(jb_KupNie, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                .addGap(179, 179, 179))
             .addGroup(jd_KupPLayout.createSequentialGroup()
-                .addContainerGap(98, Short.MAX_VALUE)
-                .addGroup(jd_KupPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jl_KupP, javax.swing.GroupLayout.DEFAULT_SIZE, 265, Short.MAX_VALUE)
-                    .addGroup(jd_KupPLayout.createSequentialGroup()
-                        .addComponent(jb_KupTak, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
-                        .addComponent(jb_KupNie, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(57, 57, 57))
+                .addContainerGap()
+                .addComponent(jl_KupP, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jd_KupPLayout.setVerticalGroup(
             jd_KupPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jd_KupPLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jl_KupP, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jl_KupP, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(jd_KupPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jb_KupTak)
                     .addComponent(jb_KupNie))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
         jd_KupD.setTitle("Modernizacja");
-        jd_KupD.setMinimumSize(new java.awt.Dimension(500, 200));
+        jd_KupD.setMaximumSize(new java.awt.Dimension(650, 200));
+        jd_KupD.setMinimumSize(new java.awt.Dimension(650, 200));
+        jd_KupD.setPreferredSize(new java.awt.Dimension(650, 200));
+        jd_KupD.setSize(new java.awt.Dimension(650, 200));
 
         jl_KupD.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jl_KupD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jl_KupD.setText("Czy chcesz kupic domek za 200$?");
 
         jb_KupDTak.setText("Tak");
@@ -290,21 +300,22 @@ public class MainWindow extends javax.swing.JFrame {
         jd_KupDLayout.setHorizontalGroup(
             jd_KupDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jd_KupDLayout.createSequentialGroup()
-                .addGap(135, 135, 135)
-                .addGroup(jd_KupDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jl_KupD)
-                    .addGroup(jd_KupDLayout.createSequentialGroup()
-                        .addComponent(jb_KupDTak)
-                        .addGap(46, 46, 46)
-                        .addComponent(jb_KupDNie)))
-                .addContainerGap(160, Short.MAX_VALUE))
+                .addGap(173, 173, 173)
+                .addComponent(jb_KupDTak, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                .addGap(46, 46, 46)
+                .addComponent(jb_KupDNie, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
+                .addGap(214, 214, 214))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_KupDLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jl_KupD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jd_KupDLayout.setVerticalGroup(
             jd_KupDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jd_KupDLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
+                .addGap(46, 46, 46)
                 .addComponent(jl_KupD)
-                .addGap(43, 43, 43)
+                .addGap(38, 38, 38)
                 .addGroup(jd_KupDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jb_KupDTak)
                     .addComponent(jb_KupDNie))
@@ -314,6 +325,7 @@ public class MainWindow extends javax.swing.JFrame {
         jd_Error.setTitle("Error");
 
         jl_Error.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jl_Error.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jl_Error.setText("Nie masz tyle pieniedzy!");
 
         jb_Error.setText("ok");
@@ -327,12 +339,11 @@ public class MainWindow extends javax.swing.JFrame {
         jd_Error.getContentPane().setLayout(jd_ErrorLayout);
         jd_ErrorLayout.setHorizontalGroup(
             jd_ErrorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jl_Error, javax.swing.GroupLayout.DEFAULT_SIZE, 368, Short.MAX_VALUE)
             .addGroup(jd_ErrorLayout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addGroup(jd_ErrorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jb_Error)
-                    .addComponent(jl_Error))
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addGap(121, 121, 121)
+                .addComponent(jb_Error, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(143, 143, 143))
         );
         jd_ErrorLayout.setVerticalGroup(
             jd_ErrorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -341,11 +352,14 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(jl_Error)
                 .addGap(18, 18, 18)
                 .addComponent(jb_Error)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         jd_Rachunek.setTitle("Rachunek");
-        jd_Rachunek.setMinimumSize(new java.awt.Dimension(351, 212));
+        jd_Rachunek.setMaximumSize(new java.awt.Dimension(500, 300));
+        jd_Rachunek.setMinimumSize(new java.awt.Dimension(500, 300));
+        jd_Rachunek.setPreferredSize(new java.awt.Dimension(500, 300));
+        jd_Rachunek.setSize(new java.awt.Dimension(500, 300));
 
         jl_Rachunek.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jl_Rachunek.setText("Rachunek");
@@ -368,16 +382,15 @@ public class MainWindow extends javax.swing.JFrame {
         jd_RachunekLayout.setHorizontalGroup(
             jd_RachunekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jd_RachunekLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
                 .addGroup(jd_RachunekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jd_RachunekLayout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addGroup(jd_RachunekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jl_Rachunek)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jd_RachunekLayout.createSequentialGroup()
-                        .addGap(132, 132, 132)
-                        .addComponent(jb_Zaplac)))
-                .addContainerGap(37, Short.MAX_VALUE))
+                    .addComponent(jl_Rachunek)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 435, Short.MAX_VALUE))
+                .addGap(38, 38, 38))
+            .addGroup(jd_RachunekLayout.createSequentialGroup()
+                .addGap(182, 182, 182)
+                .addComponent(jb_Zaplac, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jd_RachunekLayout.setVerticalGroup(
             jd_RachunekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -385,17 +398,20 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jl_Rachunek)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
                 .addComponent(jb_Zaplac)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("UMonopoly 2.0");
-        setMinimumSize(new java.awt.Dimension(1280, 1024));
+        setMinimumSize(new java.awt.Dimension(1280, 768));
+        setPreferredSize(new java.awt.Dimension(1280, 768));
+        setResizable(false);
+        setSize(new java.awt.Dimension(1280, 768));
 
-        jp_Gra.setBackground(new java.awt.Color(0, 255, 255));
+        jp_Gra.setBackground(new java.awt.Color(255, 204, 255));
 
         jp_Plansza.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jp_Plansza.add(card_Tooltip2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 20, 50));
@@ -543,7 +559,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(0, 595, Short.MAX_VALUE))
         );
 
-        jp_Ustawienia.setBackground(new java.awt.Color(255, 0, 255));
+        jp_Ustawienia.setBackground(new java.awt.Color(255, 204, 255));
         jp_Ustawienia.setMinimumSize(new java.awt.Dimension(1280, 1024));
         jp_Ustawienia.setPreferredSize(new java.awt.Dimension(1280, 1024));
 
@@ -597,7 +613,7 @@ public class MainWindow extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(js_LiczbaGraczy, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jp_UstawieniaLayout.createSequentialGroup()
-                        .addComponent(jtf_NazwaGracza1)
+                        .addComponent(jtf_NazwaGracza1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
                         .addComponent(jcb_KolorGracza1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(126, 126, 126)
@@ -644,9 +660,10 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap(490, Short.MAX_VALUE))
         );
 
-        jp_Start.setBackground(new java.awt.Color(0, 255, 0));
-        jp_Start.setMinimumSize(new java.awt.Dimension(1280, 1024));
-        jp_Start.setPreferredSize(new java.awt.Dimension(1280, 1024));
+        jp_Start.setBackground(new java.awt.Color(255, 204, 255));
+        jp_Start.setMaximumSize(new java.awt.Dimension(128, 768));
+        jp_Start.setMinimumSize(new java.awt.Dimension(1280, 768));
+        jp_Start.setPreferredSize(new java.awt.Dimension(1280, 768));
 
         jb_Start.setText("Start");
         jb_Start.addActionListener(new java.awt.event.ActionListener() {
@@ -682,7 +699,7 @@ public class MainWindow extends javax.swing.JFrame {
         jp_StartLayout.setVerticalGroup(
             jp_StartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jp_StartLayout.createSequentialGroup()
-                .addContainerGap(376, Short.MAX_VALUE)
+                .addContainerGap(120, Short.MAX_VALUE)
                 .addComponent(jl_Logo)
                 .addGap(75, 75, 75)
                 .addComponent(jb_Start, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -695,7 +712,7 @@ public class MainWindow extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jp_Start, javax.swing.GroupLayout.DEFAULT_SIZE, 2188, Short.MAX_VALUE)
+            .addComponent(jp_Start, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jp_Ustawienia, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 2188, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
