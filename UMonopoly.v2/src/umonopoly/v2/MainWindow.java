@@ -21,6 +21,7 @@ public class MainWindow extends javax.swing.JFrame {
     private Engine silnik;
     public MainWindow() {
         initComponents();
+        this.setLocationRelativeTo(null);
         jp_Ustawienia.setVisible(false);
         jp_Gra.setVisible(false);
         js_LiczbaGraczy.setValue(2);
@@ -219,9 +220,7 @@ public class MainWindow extends javax.swing.JFrame {
         );
 
         jd_KupP.setTitle("Kup pole");
-        jd_KupP.setMaximumSize(new java.awt.Dimension(650, 200));
         jd_KupP.setMinimumSize(new java.awt.Dimension(650, 200));
-        jd_KupP.setPreferredSize(new java.awt.Dimension(650, 200));
         jd_KupP.setSize(new java.awt.Dimension(650, 200));
 
         jl_KupP.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -272,9 +271,7 @@ public class MainWindow extends javax.swing.JFrame {
         );
 
         jd_KupD.setTitle("Modernizacja");
-        jd_KupD.setMaximumSize(new java.awt.Dimension(650, 200));
         jd_KupD.setMinimumSize(new java.awt.Dimension(650, 200));
-        jd_KupD.setPreferredSize(new java.awt.Dimension(650, 200));
         jd_KupD.setSize(new java.awt.Dimension(650, 200));
 
         jl_KupD.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -356,9 +353,7 @@ public class MainWindow extends javax.swing.JFrame {
         );
 
         jd_Rachunek.setTitle("Rachunek");
-        jd_Rachunek.setMaximumSize(new java.awt.Dimension(500, 300));
         jd_Rachunek.setMinimumSize(new java.awt.Dimension(500, 300));
-        jd_Rachunek.setPreferredSize(new java.awt.Dimension(500, 300));
         jd_Rachunek.setSize(new java.awt.Dimension(500, 300));
 
         jl_Rachunek.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -734,10 +729,12 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void jb_zakonczActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_zakonczActionPerformed
         jd_Autorzy.setVisible(false);
+        jd_Autorzy.setLocationRelativeTo(null);
     }//GEN-LAST:event_jb_zakonczActionPerformed
 
     private void jb_AutorzyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_AutorzyActionPerformed
         jd_Autorzy.setVisible(true);
+        jd_Autorzy.setLocationRelativeTo(null);
     }//GEN-LAST:event_jb_AutorzyActionPerformed
 
     private void jb_StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_StartActionPerformed
@@ -986,6 +983,7 @@ public class MainWindow extends javax.swing.JFrame {
                 jb_KupTak.setEnabled(false);
             }
             jd_KupP.setVisible(true);
+            jd_KupP.setLocationRelativeTo(null);
             
         }
         
@@ -993,6 +991,7 @@ public class MainWindow extends javax.swing.JFrame {
         {
             jl_KupD.setText("Czy chcesz kupic labolatrium na: "+silnik.getPole(silnik.getAktywnyPlayer().getWhere()).getName()+" za "+silnik.getPole(silnik.getAktywnyPlayer().getWhere()).getHome()+"?");
             jd_KupD.setVisible(true);
+            jd_KupD.setLocationRelativeTo(null);
             if(silnik.getAktywnyPlayer().getMoney()<silnik.getPole(silnik.getAktywnyPlayer().getWhere()).getHome())
             {
                 jb_KupDTak.setEnabled(false);
@@ -1003,6 +1002,7 @@ public class MainWindow extends javax.swing.JFrame {
         if (silnik.getPole(silnik.getAktywnyPlayer().getWhere()).getOwner()!=silnik.getAktywnyPlayer().getId() && silnik.getPole(silnik.getAktywnyPlayer().getWhere()).getOwner()!=5)
        {
             jd_Rachunek.setVisible(true);
+            jd_Rachunek.setLocationRelativeTo(null);
             jta_Rachunek.setText("Od: "+silnik.getGracze(silnik.getPole(silnik.getAktywnyPlayer().getWhere()).getOwner()).getName()+"\nDo: "+silnik.getAktywnyPlayer().getName()+"\nZa: "+silnik.getPole(silnik.getAktywnyPlayer().getWhere()).getName()+"\nNależnosc: "+silnik.getPole(silnik.getAktywnyPlayer().getWhere()).getKoszt()+"\nIlosc Labolatoriow:" + silnik.getPole(silnik.getAktywnyPlayer().getWhere()).getDomki());
       }
         }
