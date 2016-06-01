@@ -5,6 +5,7 @@
  */
 package umonopoly.v2;
 
+import java.awt.Color;
 import java.util.Random;
 import java.util.Vector;
 import javax.swing.JOptionPane;
@@ -580,13 +581,13 @@ public class MainWindow extends javax.swing.JFrame {
 
         jtf_NazwaGracza4.setText("Gracz4");
 
-        jcb_KolorGracza1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Czerwony", "Niebieski", "Zielony", "Żółty" }));
+        jcb_KolorGracza1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seledynowy", "Różowy", "Neonowy", "Moro" }));
 
-        jcb_KolorGracza2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Czerwony", "Niebieski", "Zielony", "Żółty" }));
+        jcb_KolorGracza2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seledynowy", "Różowy", "Neonowy", "Moro" }));
 
-        jcb_KolorGracza3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Czerwony", "Niebieski", "Zielony", "Żółty" }));
+        jcb_KolorGracza3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seledynowy", "Różowy", "Neonowy", "Moro" }));
 
-        jcb_KolorGracza4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Czerwony", "Niebieski", "Zielony", "Żółty" }));
+        jcb_KolorGracza4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seledynowy", "Różowy", "Neonowy", "Moro" }));
 
         jb_StartGra.setText("Rozpocznij gre");
         jb_StartGra.addActionListener(new java.awt.event.ActionListener() {
@@ -791,7 +792,9 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel2.setVisible(false);
         jLabel3.setVisible(false);
         jLabel4.setVisible(false);
-
+       
+        
+        
         if(jcb_KolorGracza1.getSelectedIndex()!=jcb_KolorGracza2.getSelectedIndex() && jcb_KolorGracza1.getSelectedIndex()!=jcb_KolorGracza3.getSelectedIndex() && jcb_KolorGracza1.getSelectedIndex()!=jcb_KolorGracza4.getSelectedIndex() && jcb_KolorGracza2.getSelectedIndex()!=jcb_KolorGracza3.getSelectedIndex() && jcb_KolorGracza2.getSelectedIndex()!=jcb_KolorGracza4.getSelectedIndex() && jcb_KolorGracza3.getSelectedIndex()!=jcb_KolorGracza4.getSelectedIndex())
         {
             jp_Ustawienia.setVisible(false);
@@ -873,25 +876,25 @@ public class MainWindow extends javax.swing.JFrame {
         
         for(int i=0;i<silnik.getSizeOfPlayer();i++)
         {
-            if(silnik.getGracze(i).getKolor()=="Czerwony")
+            if(silnik.getGracze(i).getKolor()=="Seledynowy")
             {
                 grid1.rysujR(silnik.getGracze(i).getWhere());
                 jLabel1.setVisible(true);
                 jLabel1.setText(silnik.getGracze(i).getName());
             }
-            if(silnik.getGracze(i).getKolor()=="Niebieski")
+            if(silnik.getGracze(i).getKolor()=="Różowy")
             {
                 grid1.rysujB(silnik.getGracze(i).getWhere());
                 jLabel2.setVisible(true);
                 jLabel2.setText(silnik.getGracze(i).getName());
             }
-            if(silnik.getGracze(i).getKolor()=="Zielony")
+            if(silnik.getGracze(i).getKolor()=="Neonowy")
             {
                 grid1.rysujG(silnik.getGracze(i).getWhere());
                 jLabel3.setVisible(true);
                 jLabel3.setText(silnik.getGracze(i).getName());
             }
-            if(silnik.getGracze(i).getKolor()=="Żółty")
+            if(silnik.getGracze(i).getKolor()=="Moro")
             {
                 grid1.rysujY(silnik.getGracze(i).getWhere());
                 jLabel4.setVisible(true);
@@ -899,7 +902,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         }
         }
-                
+                 
     }//GEN-LAST:event_jb_StartGraActionPerformed
     Boolean cheat =false;
     private void jb_RollActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_RollActionPerformed
@@ -1029,6 +1032,22 @@ public class MainWindow extends javax.swing.JFrame {
             {
                 grid1.rysujY(silnik.getAktywnyPlayer().getWhere());
             }
+            if (silnik.getAktywnyPlayer().getKolor()=="Seledynowy")
+        {
+            player_Hand2.setBackground(Color.CYAN);
+        }
+        if (silnik.getAktywnyPlayer().getKolor()=="Moro")
+        {
+            player_Hand2.setBackground(Color.green);
+        }
+        if (silnik.getAktywnyPlayer().getKolor()=="Różowy")
+        {
+            player_Hand2.setBackground(Color.PINK);
+        }
+        if (silnik.getAktywnyPlayer().getKolor()=="Neonowy")
+        {
+            player_Hand2.setBackground(Color.WHITE);
+        }
     }//GEN-LAST:event_jb_RollActionPerformed
 
     private void jb_EotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_EotActionPerformed

@@ -1013,10 +1013,10 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
-                <StringItem index="0" value="Czerwony"/>
-                <StringItem index="1" value="Niebieski"/>
-                <StringItem index="2" value="Zielony"/>
-                <StringItem index="3" value="&#x17b;&#xf3;&#x142;ty"/>
+                <StringItem index="0" value="Seledynowy"/>
+                <StringItem index="1" value="R&#xf3;&#x17c;owy"/>
+                <StringItem index="2" value="Neonowy"/>
+                <StringItem index="3" value="Moro"/>
               </StringArray>
             </Property>
           </Properties>
@@ -1028,10 +1028,10 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
-                <StringItem index="0" value="Czerwony"/>
-                <StringItem index="1" value="Niebieski"/>
-                <StringItem index="2" value="Zielony"/>
-                <StringItem index="3" value="&#x17b;&#xf3;&#x142;ty"/>
+                <StringItem index="0" value="Seledynowy"/>
+                <StringItem index="1" value="R&#xf3;&#x17c;owy"/>
+                <StringItem index="2" value="Neonowy"/>
+                <StringItem index="3" value="Moro"/>
               </StringArray>
             </Property>
           </Properties>
@@ -1043,10 +1043,10 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
-                <StringItem index="0" value="Czerwony"/>
-                <StringItem index="1" value="Niebieski"/>
-                <StringItem index="2" value="Zielony"/>
-                <StringItem index="3" value="&#x17b;&#xf3;&#x142;ty"/>
+                <StringItem index="0" value="Seledynowy"/>
+                <StringItem index="1" value="R&#xf3;&#x17c;owy"/>
+                <StringItem index="2" value="Neonowy"/>
+                <StringItem index="3" value="Moro"/>
               </StringArray>
             </Property>
           </Properties>
@@ -1058,10 +1058,10 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
-                <StringItem index="0" value="Czerwony"/>
-                <StringItem index="1" value="Niebieski"/>
-                <StringItem index="2" value="Zielony"/>
-                <StringItem index="3" value="&#x17b;&#xf3;&#x142;ty"/>
+                <StringItem index="0" value="Seledynowy"/>
+                <StringItem index="1" value="R&#xf3;&#x17c;owy"/>
+                <StringItem index="2" value="Neonowy"/>
+                <StringItem index="3" value="Moro"/>
               </StringArray>
             </Property>
           </Properties>
