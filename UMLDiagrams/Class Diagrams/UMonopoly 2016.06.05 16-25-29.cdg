@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="UMonopoly">
+  <ClassDiagramComponents>
+    <Class name="Card" package="umonopoly.v2" visibility="public" xPosition="2316.0" yPosition="958.0">
+      <Fields>
+        <Field name="ID" type="int" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="domki" type="int" visibility="private"/>
+        <Field name="buy_out" type="double" visibility="private"/>
+        <Field name="hipoteka" type="double" visibility="private"/>
+        <Field name="pay_0" type="double" visibility="private"/>
+        <Field name="pay_1" type="double" visibility="private"/>
+        <Field name="pay_2" type="double" visibility="private"/>
+        <Field name="pay_3" type="double" visibility="private"/>
+        <Field name="pay_4" type="double" visibility="private"/>
+        <Field name="pay_H" type="double" visibility="private"/>
+        <Field name="pay_All" type="double" visibility="private"/>
+        <Field name="home" type="double" visibility="private"/>
+        <Field name="owner" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="ID"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="nazwa"/>
+          <Argument type="double" name="buy_price"/>
+          <Argument type="double" name="pay0"/>
+          <Argument type="double" name="pay1"/>
+          <Argument type="double" name="pay2"/>
+          <Argument type="double" name="pay3"/>
+          <Argument type="double" name="pay4"/>
+          <Argument type="double" name="payH"/>
+          <Argument type="double" name="home_price"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getID" returnType="int" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="getBuy_out" returnType="double" visibility="public"/>
+        <Method name="getHome" returnType="double" visibility="public"/>
+        <Method name="getKoszt" returnType="double" visibility="public"/>
+        <Method name="setDomki" returnType="void" visibility="public">
+          <Argument type="int" name="x"/>
+        </Method>
+        <Method name="getDomki" returnType="int" visibility="public"/>
+        <Method name="getOwner" returnType="int" visibility="public"/>
+        <Method name="setOwner" returnType="void" visibility="public">
+          <Argument type="int" name="owner"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Card_Tooltip" package="umonopoly.v2" visibility="public" xPosition="1285.0" yPosition="2518.0">
+      <Fields>
+        <Field name="ID" type="int" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getNr" returnType="int" visibility="public"/>
+        <Method name="setNr" returnType="void" visibility="public">
+          <Argument type="int" name="nr"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="Engine" package="umonopoly.v2" visibility="public" xPosition="2801.0" yPosition="2134.0">
+      <Fields>
+        <Field name="log" type="String" visibility="private"/>
+        <Field name="gracze" type="List&lt;Player&gt;" visibility="private"/>
+        <Field name="aktywny_gracz" type="int" visibility="private"/>
+        <Field name="pola" type="List&lt;Card&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="x"/>
+          <Argument type="Vector&lt;String&gt;" name="name"/>
+          <Argument type="Vector&lt;String&gt;" name="kolor"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getAktywnyPlayer" returnType="Player" visibility="public"/>
+        <Method name="getLog" returnType="String" visibility="public"/>
+        <Method name="setLog" returnType="void" visibility="public">
+          <Argument type="String" name="log"/>
+        </Method>
+        <Method name="getPole" returnType="Card" visibility="public">
+          <Argument type="int" name="x"/>
+        </Method>
+        <Method name="getGracze" returnType="Player" visibility="public">
+          <Argument type="int" name="x"/>
+        </Method>
+        <Method name="koniecTury" returnType="void" visibility="public"/>
+        <Method name="getSizeOfPlayer" returnType="int" visibility="public"/>
+        <Method name="random2k6" returnType="void" visibility="public">
+          <Argument type="int" name="x"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Grid" package="umonopoly.v2" visibility="public" xPosition="-1.0" yPosition="-2571.0">
+      <Fields>
+        <Field name="czerwony" type="Vector&lt;JLabel&gt;" visibility="private"/>
+        <Field name="zielony" type="Vector&lt;JLabel&gt;" visibility="private"/>
+        <Field name="niebieski" type="Vector&lt;JLabel&gt;" visibility="private"/>
+        <Field name="zolty" type="Vector&lt;JLabel&gt;" visibility="private"/>
+        <Field name="g1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g13" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g14" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g15" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g16" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g17" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g18" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g19" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g20" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g21" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g22" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g23" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g24" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g25" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g26" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g27" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g28" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g29" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g30" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g31" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g32" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g33" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g34" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g35" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g36" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g37" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g38" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g39" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g40" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g41" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g42" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g43" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g44" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g45" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g46" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g47" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g48" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g49" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g50" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g51" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g52" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g53" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g54" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g55" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g56" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g57" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g58" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g59" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g60" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g61" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g62" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g63" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g64" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g65" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g66" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g67" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g68" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g69" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g70" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g71" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g72" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g73" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g74" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g75" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g76" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g77" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g78" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g79" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g80" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="g9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel13" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel14" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel15" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel16" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel17" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel18" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel19" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel20" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel21" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel22" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel23" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel24" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel25" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel26" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel27" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel28" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel29" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel30" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel31" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel32" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel33" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel34" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel35" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel36" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel37" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel38" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel39" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel40" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel41" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel42" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel43" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel44" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel45" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel46" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel47" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel48" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel49" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel50" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel51" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel52" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel53" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel54" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel55" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel56" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel57" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel58" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel59" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel60" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel61" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel62" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel63" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel64" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel65" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel66" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel67" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel68" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel69" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel70" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel71" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel72" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel73" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel74" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel75" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel76" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel77" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel78" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel79" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel80" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel81" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel82" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel83" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="clean" returnType="void" visibility="public"/>
+        <Method name="rysujR" returnType="void" visibility="public">
+          <Argument type="int" name="x"/>
+        </Method>
+        <Method name="rysujG" returnType="void" visibility="public">
+          <Argument type="int" name="x"/>
+        </Method>
+        <Method name="rysujB" returnType="void" visibility="public">
+          <Argument type="int" name="x"/>
+        </Method>
+        <Method name="rysujY" returnType="void" visibility="public">
+          <Argument type="int" name="x"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="MainWindow" package="umonopoly.v2" visibility="public" xPosition="1508.0" yPosition="623.0">
+      <Fields>
+        <Field name="silnik" type="Engine" visibility="private"/>
+        <Field name="cheat" type="Boolean" visibility="package"/>
+        <Field name="card_Tooltip10" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip11" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip12" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip13" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip14" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip15" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip16" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip17" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip18" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip19" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip2" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip20" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip21" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip22" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip23" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip24" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip25" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip26" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip28" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip29" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip3" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip30" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip31" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip4" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip5" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip6" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip7" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip8" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="card_Tooltip9" type="umonopoly.v2.Card_Tooltip" visibility="private"/>
+        <Field name="grid1" type="umonopoly.v2.Grid" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane3" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jb_Autorzy" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jb_Eot" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jb_Error" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jb_KupDNie" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jb_KupDTak" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jb_KupNie" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jb_KupTak" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jb_Roll" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jb_Start" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jb_StartGra" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jb_Zaplac" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jb_zakoncz" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jcb_KolorGracza1" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jcb_KolorGracza2" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jcb_KolorGracza3" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jcb_KolorGracza4" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jd_Autorzy" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="jd_Error" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="jd_KupD" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="jd_KupP" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="jd_Rachunek" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="jl_AktywnyGracz" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jl_Error" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jl_KupD" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jl_KupP" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jl_LiczbaGraczy" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jl_Logo" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jl_Logo2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jl_Rachunek" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jl_Ustawienia" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jl_autorzy" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jl_dawid" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jl_oskar" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jl_patryk" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jl_pawel" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jp_Gra" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jp_Plansza" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jp_Start" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jp_Ustawienia" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="js_LiczbaGraczy" type="javax.swing.JSpinner" visibility="private"/>
+        <Field name="jta_Fundusze" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="jta_Rachunek" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="jtf_NazwaGracza1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jtf_NazwaGracza2" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jtf_NazwaGracza3" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jtf_NazwaGracza4" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jtp_Log" type="javax.swing.JTextPane" visibility="private"/>
+        <Field name="player_Hand2" type="umonopoly.v2.Player_Hand" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jb_zakonczActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jb_AutorzyActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jb_StartActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="js_LiczbaGraczyStateChanged" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.ChangeEvent" name="evt"/>
+        </Method>
+        <Method name="jb_StartGraActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jb_RollActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jb_EotActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jb_KupTakActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jb_KupNieActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jb_KupDNieActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jb_KupDTakActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jb_ErrorActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jb_ZaplacActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Player" package="umonopoly.v2" visibility="public" xPosition="2958.0" yPosition="2876.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="money" type="Double" visibility="private"/>
+        <Field name="player_hand" type="List&lt;Integer&gt;" visibility="private"/>
+        <Field name="kolor" type="String" visibility="private"/>
+        <Field name="where" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="iD"/>
+          <Argument type="String" name="imie"/>
+          <Argument type="String" name="kolor"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getMoney" returnType="Double" visibility="public"/>
+        <Method name="setMoney" returnType="void" visibility="public">
+          <Argument type="Double" name="money"/>
+        </Method>
+        <Method name="getKolor" returnType="String" visibility="public"/>
+        <Method name="setKolor" returnType="void" visibility="public">
+          <Argument type="String" name="kolor"/>
+        </Method>
+        <Method name="getWhere" returnType="int" visibility="public"/>
+        <Method name="setWhere" returnType="void" visibility="public">
+          <Argument type="int" name="where"/>
+        </Method>
+        <Method name="addToHand" returnType="void" visibility="public">
+          <Argument type="int" name="x"/>
+        </Method>
+        <Method name="getHand" returnType="int" visibility="public">
+          <Argument type="int" name="x"/>
+        </Method>
+        <Method name="sizeHand" returnType="int" visibility="public"/>
+        <Method name="getPlayer_hand" returnType="List&lt;Integer&gt;" visibility="public"/>
+        <Method name="getId" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Player_Hand" package="umonopoly.v2" visibility="public" xPosition="1319.0" yPosition="2819.0">
+      <Fields>
+        <Field name="etykiety" type="Vector&lt;JLabel&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel13" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel14" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel15" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel16" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel17" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel18" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel19" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel20" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setPlayer_hand" returnType="void" visibility="public">
+          <Argument type="List&lt;Integer&gt;" name="player_hand"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="umonopoly.v2.Engine" target="umonopoly.v2.Card" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pola" source="umonopoly.v2.Engine" target="umonopoly.v2.Card" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Card&gt;"/>
+    <HasRelation name="gracze" source="umonopoly.v2.Engine" target="umonopoly.v2.Player" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Player&gt;"/>
+    <HasRelation name="silnik" source="umonopoly.v2.MainWindow" target="umonopoly.v2.Engine" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="umonopoly.v2.Engine" target="umonopoly.v2.Player" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

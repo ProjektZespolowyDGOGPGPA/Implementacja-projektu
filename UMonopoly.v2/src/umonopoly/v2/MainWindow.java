@@ -1016,19 +1016,19 @@ public class MainWindow extends javax.swing.JFrame {
             }
          jl_AktywnyGracz.setText("Aktywny Gracz: "+silnik.getAktywnyPlayer().getName()+" "+silnik.getAktywnyPlayer().getMoney()+"$");
          
-         if(silnik.getAktywnyPlayer().getKolor()=="Czerwony")
+         if(silnik.getAktywnyPlayer().getKolor()=="Seledynowy")
             {
                 grid1.rysujR(silnik.getAktywnyPlayer().getWhere());
             }
-            if(silnik.getAktywnyPlayer().getKolor()=="Niebieski")
+            if(silnik.getAktywnyPlayer().getKolor()=="Moro")
             {
                 grid1.rysujB(silnik.getAktywnyPlayer().getWhere());
             }
-            if(silnik.getAktywnyPlayer().getKolor()=="Zielony")
+            if(silnik.getAktywnyPlayer().getKolor()=="Różowy")
             {
                 grid1.rysujG(silnik.getAktywnyPlayer().getWhere());
             }
-            if(silnik.getAktywnyPlayer().getKolor()=="Żółty")
+            if(silnik.getAktywnyPlayer().getKolor()=="Neonowy")
             {
                 grid1.rysujY(silnik.getAktywnyPlayer().getWhere());
             }
