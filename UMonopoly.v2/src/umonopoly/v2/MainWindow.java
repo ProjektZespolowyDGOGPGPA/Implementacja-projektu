@@ -1020,15 +1020,15 @@ public class MainWindow extends javax.swing.JFrame {
             {
                 grid1.rysujR(silnik.getAktywnyPlayer().getWhere());
             }
-            if(silnik.getAktywnyPlayer().getKolor()=="Moro")
+            if(silnik.getAktywnyPlayer().getKolor()=="Różowy")
             {
                 grid1.rysujB(silnik.getAktywnyPlayer().getWhere());
             }
-            if(silnik.getAktywnyPlayer().getKolor()=="Różowy")
+            if(silnik.getAktywnyPlayer().getKolor()=="Neonowy")
             {
                 grid1.rysujG(silnik.getAktywnyPlayer().getWhere());
             }
-            if(silnik.getAktywnyPlayer().getKolor()=="Neonowy")
+            if(silnik.getAktywnyPlayer().getKolor()=="Moro")
             {
                 grid1.rysujY(silnik.getAktywnyPlayer().getWhere());
             }
